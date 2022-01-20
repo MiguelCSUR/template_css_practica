@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Contacto</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .w3-sidebar {
+        z-index: 3;
+        width: 250px;
+        top: 43px;
+        bottom: 0;
+        height: inherit;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Inicio</a>
+            <a href="aboutus.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Nosotros</a>
+            <a href="servicios.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Servicios</a>
+            <a href="contacto.html" class="w3-bar-item w3-button w3-theme-l1">Contacto</a>
+            <a href="libre.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Libre</a>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Menu</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="index.html">Inicio</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="aboutus.html">Nosotros</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="servicios.html">Servicios</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="contacto.html">Contacto</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="libre.html">Libre</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1 class="w3-text-teal">Contacto</h1>
+                <p>Estamos siempre abiertos a compartir contenido. Por favor, si tienes alguna duda, o simplemente quieres compartir qué te ha parecido nuestro contenido con nosotros, no dudes en contactarnos.</p>
+            </div>
+            <div class="w3-third w3-container">
+                <img src="resources/images/equipo_uno_concentrado.png" style="width:100%" class="w3-border w3-center w3-margin-top"></img>
+            </div>
+
+            <div class="w3-row">
+                <div class="w3-twothird w3-container">
+                    <h1 class="w3-text-teal">Contacto por Página:</h1>
+                    <p>Déjanos un mensaje por la página. Rellena tus datos y coméntanos lo que quieras.
+                    </p>
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Nombre completo</label>
+                    <input class="w3-input w3-border" type="text" placeholder="Nombre">
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Télefono de contacto</label>
+                    <input class="w3-input w3-border" type="text" placeholder="Telefono">
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Email para contacto</label>
+                    <input class="w3-input w3-border" type="text" placeholder="Email">
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Motivo de consulta</label>
+                    <select class="w3-input w3-border" name="reason" id="reason" required class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Introduce el motivo de tu consulta">
+                  <option value="consult">Consulta</option>
+                  <option value="suggestion">Recomendaciones</option>
+                  <option value="opinion">Opinión</option>
+                  <option value="review">Crítica Constructiva</option>
+                </select>
+                </div>
+
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Género</label>
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <input class="form_radio" type="radio" id="male" name="sex" value="male">
+                    <label for="male" class="w3-margin-right">Masculino</label>
+                    <input class="form_radio" type="radio" id="female" name="sex" value="female">
+                    <label for="female" class="w3-margin-right">Femenino</label>
+                    <input class="form_radio" type="radio" id="othter" name="sex" value="other">
+                    <label for="other" class="w3-margin-right">No Responder</label>
+                </div>
+                <div class="w3-twothird w3-container w3-margin-top">
+                    <label>Comentario</label>
+                    <textarea class="w3-input w3-border" name="coment" id="coment" cols="10" rows="5" placeholder="Comenta lo que quieras." class="btn btn-primary" data-bs-toggle="tooltip" title="¡Aquí deja tu comentario!"></textarea>
+                </div>
+
+
+            </div>
+
+            <div class="w3-row w3-padding-64">
+                <div class="w3-twothird w3-container">
+                    <h1 class="w3-text-teal">Correo Electrónico:</h1>
+                    <p>Mándanos un e-mail a nuestra dirección de correo: eq1@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="w3-row w3-padding-64">
+                <div class="w3-twothird w3-container">
+                    <h1 class="w3-text-teal">Correo Ordinario:</h1>
+                    <p>Si te va el rollo analógico, y quieres mándarnos un correo ordinario, nos encontrarás en la dirección: Pl. Virgen Milagrosa, 11, 29017 Málaga</p>
+                    <p>Por favor, no vengas en persona. No nos gusta mucho el trato físico... 😅</p>
+                </div>
+                <div class="w3-third w3-container">
+                    <iframe style="width:100%" class="reposive w3-border w3-center w3-margin-top" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.1180292975423!2d-4.367823984712368!3d36.719726479965225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7259120bfc4db3%3A0xec0ecedd8dc61902!2sCesur%20M%C3%A1laga%20Este%20-%20Formaci%C3%B3n%20Profesional!5e0!3m2!1sen!2ses!4v1634147483727!5m2!1sen!2ses"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                    <a class="w3-button w3-black" href="#">1</a>
+                    <a class="w3-button w3-hover-black" href="#">2</a>
+                    <a class="w3-button w3-hover-black" href="#">3</a>
+                    <a class="w3-button w3-hover-black" href="#">4</a>
+                    <a class="w3-button w3-hover-black" href="#">5</a>
+                    <a class="w3-button w3-hover-black" href="#">»</a>
+                </div>
+            </div>
+
+            <footer id="myFooter">
+                <div class="w3-container w3-theme-l2 w3-padding-32">
+                    <h4>Autores: alumnos "CFGS Desarrollo de Aplicaciones Multiplataforma".</h4>
+                </div>
+
+                <div class="w3-container w3-theme-l1">
+                    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+            </footer>
+
+            <!-- END MAIN -->
+        </div>
+
+        <script>
+            // Get the Sidebar
+            var mySidebar = document.getElementById("mySidebar");
+
+            // Get the DIV with overlay effect
+            var overlayBg = document.getElementById("myOverlay");
+
+            // Toggle between showing and hiding the sidebar, and add overlay effect
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                    overlayBg.style.display = "none";
+                } else {
+                    mySidebar.style.display = 'block';
+                    overlayBg.style.display = "block";
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+                overlayBg.style.display = "none";
+            }
+        </script>
+
+</body>
+
+</html>
